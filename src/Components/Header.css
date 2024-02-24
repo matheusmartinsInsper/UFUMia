@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: black;
+  padding: 30px 60px;
+}
+
+.left-section-h {
+  display: flex;
+  align-items: center;
+}
+
+.ong-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-right: 20px;
+}
+
+.center-section-h  {
+  text-align: center;
+}
+
+.topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topics li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+.hamburger-icon {
+  /* Estilos para o ícone do hambúrguer */
+}
+@media screen and (max-width: 450px) {
+  .center-section-h{
+    display:none;
+  }
+  .header {
+   
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header {
+   
+    padding: 30px 15px;
+  }
+}

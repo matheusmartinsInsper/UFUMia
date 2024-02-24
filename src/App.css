@@ -1,0 +1,12 @@
+*{
+  font-family: 'Nunito', sans-serif;
+}
+.background {
+  background-color: #fff;
+  width: 100vw; /* 100% da largura da viewport */
+  height: 100%; /* 100% da altura disponível */
+  /* Mantém o elemento fixo na tela */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca atrás de outros elementos */
+}

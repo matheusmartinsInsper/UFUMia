@@ -1,0 +1,103 @@
+.cards-container {
+    background-color: #FBCFFC;
+    display: flex;
+    flex-direction: column; /* Adicionado para criar um layout de coluna */
+    justify-content: center; /* Alinha no centro verticalmente */
+    align-items: center;
+    height: 42vh;
+    padding: 0px 65px;
+   
+}
+
+.cards-container-bottom {
+    background-color: #FBCFFC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px; /* Ajuste conforme necessário */
+    height: 60vh;
+    padding: 0px 60px;  
+    width:100%;
+    overflow-x: hidden;
+}
+.cards-container-top {
+    background-color: #FBCFFC;
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+.cards-container-top h2 {
+    font-size:2.1rem;
+    margin-bottom:-5px;
+    color:black
+}
+.cards-container-top p {
+   
+    color:black
+}
+  
+.card {
+    scroll-snap-align: start;
+    width: 16vw; /* Definindo a largura dos cards */
+    height: 200px; /* Definindo a altura dos cards */
+    background-color: white;
+    border: none;
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 0px; /* Espaço entre os cards */
+    display: flex; /* Permitir alinhamento vertical e horizontal */
+    justify-content: center; /* Alinhar conteúdo horizontalmente */
+    align-items: center; 
+    box-sizing: border-box;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    flex-direction:column;
+    align-items:Center;
+    text-align:center
+  }
+.image-container {
+    margin-bottom:-15px;
+}
+.text-container p{
+    margin-top:-10px
+}
+@media screen and (max-width: 450px) {
+    .cards-container-bottom {
+        padding:0px;
+        height: 100vh;
+      overflow-x: auto; /* Ativa o scroll horizontal quando necessário */
+      max-width: 400px; /* Define o tamanho máximo do container */
+      margin-bottom: 20px; /* Adiciona margem inferior para o scroll ficar separado do conteúdo abaixo */
+    }
+    .card {
+        width: 32vw; /* Definindo a largura dos cards */
+        margin: 0px 10px;
+        height:180px
+    }
+    .cards-container {
+        padding:10px;
+        height: 45vh;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .cards-container-bottom {
+        padding:0px;
+        height: 100vh;
+      overflow-x: auto; /* Ativa o scroll horizontal quando necessário */
+      max-width: 400px; /* Define o tamanho máximo do container */
+      margin-bottom: 20px; /* Adiciona margem inferior para o scroll ficar separado do conteúdo abaixo */
+    }
+    .card {
+        width: 32vw; /* Definindo a largura dos cards */
+        margin: 0px 10px;
+        height:180px
+    }
+    .cards-container {
+        padding:10px;
+        height: 55vh;
+    }
+  }
