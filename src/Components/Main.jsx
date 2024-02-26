@@ -1,6 +1,7 @@
 import React from 'react';
 import './Main.css'; // Estilos CSS para o componente Main
 import cat from '../images/cat2.png';
+import logo from '../images/logo.jpeg'
 
 function Main() {
   return (
@@ -31,7 +32,7 @@ function Main() {
       </div>
       <div className="right-section">
         <div id = "right-section-img">
-          <img src={cat} alt="Imagem ONG"  className='img-cat'/>
+          <img src={logo} alt="Imagem ONG"  className='img-cat'/>
         </div>
       </div>
     </main>

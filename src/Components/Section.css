@@ -6,7 +6,7 @@
     align-items: center;
     height: 42vh;
     padding: 0px 65px;
-   
+    width:auto
 }
 
 .cards-container-bottom {
@@ -16,7 +16,7 @@
     align-items: center;
     margin-top: -10px; /* Ajuste conforme necessário */
     height: 60vh;
-    padding: 0px 60px;  
+    padding: 0px 0px;  
     width:100%;
     overflow-x: hidden;
 }

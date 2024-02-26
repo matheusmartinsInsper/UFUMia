@@ -1,26 +1,38 @@
 import React, { useRef, useEffect, useState } from 'react';
 import cat from '../images/cat2.png';
+import Card from './CardCats'
 //import React from 'react';
 import './Section.css'; // Arquivo CSS para estilização dos cards
 
 
 function CardsContainer() {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const containerRef = useRef(null);
-    
-    const handlePrev = () => {
-      const container = containerRef.current;
-      const newPosition = scrollPosition - container.clientWidth;
-      setScrollPosition(Math.max(newPosition, 0));
-      container.scrollTo({ left: newPosition, behavior: 'smooth' });
-    };
-  
-    const handleNext = () => {
-      const container = containerRef.current;
-      const newPosition = scrollPosition + container.clientWidth;
-      setScrollPosition(newPosition);
-      container.scrollTo({ left: newPosition, behavior: 'smooth' });
-    };
+    let DataCards = [
+        {"img":cat,
+         "backgroundcolor":'#FFF9B2',
+         'namePet':"Pet1",
+         'description':'descricao',
+        },
+        {"img":cat,
+         "backgroundcolor":'#D0BFFF',
+         'namePet':"Pet1",
+         'description':'descricao',
+        },
+        {"img":cat,
+         "backgroundcolor":'#FFA1F5',
+         'namePet':"Pet1",
+         'description':'descricao',
+        },
+        {"img":cat,
+         "backgroundcolor":'#FFD2A5',
+         'namePet':"Pet1",
+         'description':'descricao',
+        },
+        {"img":cat,
+         "backgroundcolor":'#FFA1F5',
+         'namePet':"Pet1",
+         'description':'descricao',
+        }
+       ]
   
   return (
     <div className="cards-container">
@@ -29,61 +41,9 @@ function CardsContainer() {
            <p>Conheça alguns dos pets que ainda nao foram adotados</p>
         </div>
         <div className="cards-container-bottom">
-           <div className="card" style={{backgroundColor:'#FFF9B2'}}>
-             <div className="card-content">
-                <div className="image-container">
-                <img src={cat} alt="Imagem ONG" style={{height:'80px',borderRadius:'90%'}}/>
-                </div>
-                <div className="text-container">
-                  <h2>Pet</h2>
-                  <p>Descrição do Pet</p>
-                </div>
-             </div>      
-           </div>
-           <div className="card" style={{backgroundColor:'#D0BFFF'}}>
-           <div className="card-content">
-                <div className="image-container">
-                <img src={cat} alt="Imagem ONG" style={{height:'80px',borderRadius:'90%'}}/>
-                </div>
-                <div className="text-container">
-                  <h2>Pet</h2>
-                  <p>Descrição do Pet</p>
-                </div>
-             </div> 
-           </div>
-           <div className="card" style={{backgroundColor:'#FFA1F5'}}>
-           <div className="card-content">
-                <div className="image-container">
-                <img src={cat} alt="Imagem ONG" style={{height:'80px',borderRadius:'90%'}}/>
-                </div>
-                <div className="text-container">
-                  <h2>Pet</h2>
-                  <p>Descrição do Pet</p>
-                </div>
-             </div> 
-           </div>
-           <div className="card" style={{backgroundColor:'#FFD2A5'}}>
-           <div className="card-content">
-                <div className="image-container">
-                <img src={cat} alt="Imagem ONG" style={{height:'80px',borderRadius:'90%'}}/>
-                </div>
-                <div className="text-container">
-                  <h2>Pet</h2>
-                  <p>Descrição do Pet</p>
-                </div>
-             </div> 
-           </div>
-           <div className="card" style={{backgroundColor:'#FFA1F5'}}>
-           <div className="card-content">
-                <div className="image-container">
-                <img src={cat} alt="Imagem ONG" style={{height:'80px',borderRadius:'90%'}}/>
-                </div>
-                <div className="text-container">
-                  <h2>Pet</h2>
-                  <p>Descrição do Pet</p>
-                </div>
-             </div> 
-           </div>
+          {DataCards.map((item,index)=>{
+            return <Card img={item.img} backgroundcolor={item.backgroundcolor} namePet={item.namePet} description={item.description}/>
+          })}
         </div> 
     </div>
   );
